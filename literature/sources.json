@@ -1,0 +1,135 @@
+{
+ "retrieved": "2026-11-23",
+ "registry": "Crossref REST API (https://api.crossref.org/works/{doi}); abstracts not deposited there from OpenAlex (https://api.openalex.org/works/doi:{doi})",
+ "read_modes": {
+  "abstract-crossref": "the abstract deposited in the Crossref record was read",
+  "abstract-openalex": "the abstract reconstructed by OpenAlex from its index of word positions was read",
+  "record": "only the bibliographic record was read; nothing beyond the title, and what another item's abstract says about it, is attributed"
+ },
+ "stored_fields": "The stored Crossref records keep the fields DOI, type, title, subtitle, author, editor, container-title, volume, issue, page, publisher, issued, ISBN, abstract, URL; author entries keep given, family, name and sequence.",
+ "items": [
+  {
+   "key": "aspinall2024history",
+   "doi": "10.4324/9781003343417-3",
+   "read": "abstract-openalex",
+   "used_for": "the history of boys' schools in England and Japan; the enduring legacies of gender norms",
+   "crossref": "literature/crossref/aspinall2024history.json",
+   "openalex": "literature/openalex/aspinall2024history.json"
+  },
+  {
+   "key": "aspinall2024three",
+   "doi": "10.4324/9781003343417-6",
+   "read": "abstract-openalex",
+   "used_for": "masculinity in boys' schools; boys who do not fit orthodox images; minorities in Japan",
+   "crossref": "literature/crossref/aspinall2024three.json",
+   "openalex": "literature/openalex/aspinall2024three.json"
+  },
+  {
+   "key": "bigler2007",
+   "doi": "10.1111/j.1467-8721.2007.00496.x",
+   "read": "abstract-crossref",
+   "used_for": "developmental intergroup theory",
+   "crossref": "literature/crossref/bigler2007.json"
+  },
+  {
+   "key": "booth2011",
+   "doi": "10.2139/ssrn.1965150",
+   "read": "abstract-crossref",
+   "used_for": "sex composition and risk-taking",
+   "crossref": "literature/crossref/booth2011.json"
+  },
+  {
+   "key": "connell1996",
+   "doi": "10.1177/016146819609800203",
+   "read": "abstract-crossref",
+   "used_for": "masculinities and school gender regimes",
+   "crossref": "literature/crossref/connell1996.json"
+  },
+  {
+   "key": "doris2012",
+   "doi": "10.2139/ssrn.2164646",
+   "read": "abstract-crossref",
+   "used_for": "single-sex schooling and the mathematics gap",
+   "crossref": "literature/crossref/doris2012.json"
+  },
+  {
+   "key": "dustmann2017",
+   "doi": "10.2139/ssrn.3004353",
+   "read": "abstract-crossref",
+   "used_for": "random assignment and conversions; school-level peer composition for boys",
+   "crossref": "literature/crossref/dustmann2017.json"
+  },
+  {
+   "key": "eisenkopf2011",
+   "doi": "10.2139/ssrn.1938858",
+   "read": "abstract-crossref",
+   "used_for": "single-sex classes and girls' mathematics",
+   "crossref": "literature/crossref/eisenkopf2011.json"
+  },
+  {
+   "key": "halpern2011",
+   "doi": "10.1126/science.1205031",
+   "read": "abstract-crossref",
+   "used_for": "the quoted summary sentence",
+   "crossref": "literature/crossref/halpern2011.json"
+  },
+  {
+   "key": "heise2004",
+   "doi": "10.2139/ssrn.488183",
+   "read": "abstract-crossref",
+   "used_for": "Salomone's position as reported by Heise, and the question of boys' schools",
+   "crossref": "literature/crossref/heise2004.json"
+  },
+  {
+   "key": "lee2021",
+   "doi": "10.2139/ssrn.3957630",
+   "read": "abstract-crossref",
+   "used_for": "labour-market outcomes by sex",
+   "crossref": "literature/crossref/lee2021.json"
+  },
+  {
+   "key": "leenakazawa2021",
+   "doi": "10.2139/ssrn.3776875",
+   "read": "abstract-crossref",
+   "used_for": "labour-market outcomes by sex; network effects as a mechanism",
+   "crossref": "literature/crossref/leenakazawa2021.json"
+  },
+  {
+   "key": "pahlke2014",
+   "doi": "10.1037/a0035740",
+   "read": "abstract-openalex",
+   "used_for": "the meta-analysis",
+   "crossref": "literature/crossref/pahlke2014.json",
+   "openalex": "literature/openalex/pahlke2014.json"
+  },
+  {
+   "key": "park2012",
+   "doi": "10.1007/s13524-012-0157-1",
+   "read": "abstract-crossref",
+   "used_for": "random assignment and achievement; the selection problem",
+   "crossref": "literature/crossref/park2012.json"
+  },
+  {
+   "key": "salomone2017",
+   "doi": "10.12987/9780300129144",
+   "read": "record",
+   "used_for": "cited through the abstract of heise2004",
+   "crossref": "literature/crossref/salomone2017.json"
+  },
+  {
+   "key": "sullivan2010",
+   "doi": "10.3102/0002831209350106",
+   "read": "abstract-crossref",
+   "used_for": "attainment and gender-atypical subjects",
+   "crossref": "literature/crossref/sullivan2010.json"
+  },
+  {
+   "key": "williams2016",
+   "doi": "10.1525/california/9780520288959.003.0001",
+   "read": "abstract-openalex",
+   "used_for": "single-sex public schooling in the United States",
+   "crossref": "literature/crossref/williams2016.json",
+   "openalex": "literature/openalex/williams2016.json"
+  }
+ ]
+}

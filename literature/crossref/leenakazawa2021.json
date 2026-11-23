@@ -1,0 +1,31 @@
+{
+ "DOI": "10.2139/ssrn.3776875",
+ "type": "posted-content",
+ "title": [
+  "Does Single-Sex Schooling Help or Hurt Labor Market Outcomes? Evidence from a Natural Experiment in South Korea"
+ ],
+ "subtitle": [],
+ "author": [
+  {
+   "given": "Youngju",
+   "family": "Lee",
+   "sequence": "first"
+  },
+  {
+   "given": "Nobuhiko",
+   "family": "Nakazawa",
+   "sequence": "additional"
+  }
+ ],
+ "container-title": [],
+ "publisher": "Elsevier BV",
+ "issued": {
+  "date-parts": [
+   [
+    2021
+   ]
+  ]
+ },
+ "abstract": "<jats:p>In this study, we investigate the effects of graduating from a single-sex high school on future labor market outcomes through the use of a randomized natural experiment. South Korean students are randomly assigned, by lottery, to single-sex or coeducational schools in their school districts. Using a large set of individual-level panel data, we find that graduating from single-sex schools significantly decreases females’ future earnings after graduation. In contrast, single-sex education positively affects males’ future earnings, although the estimates are noisy. We explore potential mechanisms behind these asymmetric treatment effects, including career choice and postgraduation network effects. We do not find significant effects on other outcomes.</jats:p>",
+ "URL": "https://doi.org/10.2139/ssrn.3776875"
+}

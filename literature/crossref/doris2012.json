@@ -1,0 +1,36 @@
+{
+ "DOI": "10.2139/ssrn.2164646",
+ "type": "posted-content",
+ "title": [
+  "Gender, Single-Sex Schooling and Maths Achievement"
+ ],
+ "subtitle": [],
+ "author": [
+  {
+   "given": "Aedin",
+   "family": "Doris",
+   "sequence": "first"
+  },
+  {
+   "given": "Donal",
+   "family": "O'Neill",
+   "sequence": "additional"
+  },
+  {
+   "given": "Olive",
+   "family": "Sweetman",
+   "sequence": "additional"
+  }
+ ],
+ "container-title": [],
+ "publisher": "Elsevier BV",
+ "issued": {
+  "date-parts": [
+   [
+    2012
+   ]
+  ]
+ },
+ "abstract": "<jats:p>This paper examines the determinants of mathematical achievement among primary school children. Previous studies have found that boys perform better in maths than girls, particularly at the upper end of the distribution. It has been suggested in the literature that differences in the size of the maths gap across countries may be explained by differences in the prevalence of single-sex schooling. The Irish education system is interesting both for the fact that a sizeable proportion of children attend single-sex schools, and because these single-sex schools are part of the general educational system, rather than serving a particular socio-economic group. We exploit this fact to test whether the gender composition of schools affects the maths differential at the top of the distribution. In keeping with research on other countries, we find a significant maths gap in favour of boys, but contrary to suggestions in the literature, our results provide no evidence that single-sex schooling reduces the gap. If anything, the gender differential is larger for children educated in single-sex schools than in co-educational schools. These findings are not affected by the inclusion of a proxy for early childhood ability or by the use of instrumental variables to control for potentially endogenous school choice.</jats:p>",
+ "URL": "https://doi.org/10.2139/ssrn.2164646"
+}

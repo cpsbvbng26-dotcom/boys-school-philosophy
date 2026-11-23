@@ -1,0 +1,343 @@
+% The Value of Public Boys' Schools: A Social-Scientific Perspective
+% Build with ../build.sh (LuaLaTeX), which names the Japanese font in JA_FONT. Text: CC BY 4.0.
+\documentclass[11pt]{article}
+\usepackage{fontspec}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{microtype}
+\usepackage[round,authoryear]{natbib}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={The Value of Public Boys' Schools: A Social-Scientific Perspective},pdfauthor={Takuya Nemoto},pdfsubject={CC BY 4.0},pdfkeywords={single-sex schooling; public education; selective admission; peer effects; educational stratification; gender norms; causal inference; research design}}
+\pdfvariable suppressoptionalinfo 1023
+\pdfvariable trailerid {[<00000000000000000000000000000000><00000000000000000000000000000000>]}
+% Japanese text without a Japanese TeX package: the font named in JA_FONT by build.sh, and a line-break
+% opportunity after each CJK character except before closing punctuation and after opening brackets (paper/ja.lua).
+\newfontfamily\jafont{\directlua{tex.sprint(os.getenv("JA_FONT") or "")}}
+\directlua{dofile("ja.lua")}
+\newcommand{\ja}[1]{{\jafont\directlua{ja_emit("\luaescapestring{\detokenize{#1}}")}}}
+\sloppy
+
+% A quotation from the abstract of a cited item. verification/check_sources.py checks that the quoted words
+% occur in the stored abstract of that item.
+\newcommand{\srcq}[2]{``#2''}
+% A mechanism (Section 3) and a question of the equality critique (Section 4). check_paper.py counts them.
+\newcounter{mech}
+\newcommand{\mech}[1]{\refstepcounter{mech}\paragraph{Mechanism~\themech: #1.}}
+\newcounter{eqq}
+\newcommand{\eqq}[1]{\refstepcounter{eqq}\paragraph{Question~\theeqq: #1.}}
+\providecommand{\doi}[1]{\href{https://doi.org/#1}{\nolinkurl{doi:#1}}}
+
+\title{The Value of Public Boys' Schools:\\A Social-Scientific Perspective\\[0.4em]\large\ja{公立男子校の価値：社会科学的観点から}}
+\author{Takuya Nemoto\\\small\href{https://orcid.org/0009-0000-1406-0547}{\nolinkurl{https://orcid.org/0009-0000-1406-0547}}}
+\date{23 November 2026\\\small Preprint. Not peer-reviewed.}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent Public boys' schools are schools that a public authority funds and governs, that admit pupils by public criteria such as an entrance examination, and that admit boys only. Claims about their value are usually empirical claims in disguise: that they raise achievement, build character, foster community, or open networks. Objections to them are partly empirical too: that they sort pupils unequally, reproduce gender norms, and offer girls something separate and therefore unequal. This paper treats both sides as social-scientific hypotheses. It sets out the mechanisms through which such a school could produce value, namely peer composition, selection by examination, the absence of a fee barrier, school culture and identity, and networks and status. It states the equality critique as a set of questions about access, sorting, the reproduction of gender norms, separate provision, and pupils whom the admission category does not fit. It then reports what the studies read for this paper show, quoting their abstracts. Studies from one city in which pupils are assigned to schools at random report gains in achievement for boys in single-sex schools, a large meta-analysis reports trivial differences in controlled studies, and labour-market studies report effects that differ by sex. None of the studies of effects read here concerns the specific institutional type of the selective public boys' school, and none concerns Japan. The paper therefore ends with a research design: which comparisons, data and outcomes would be needed to decide between the competing hypotheses. Its conclusion is that the value of public boys' schools is an open empirical question on most points, and that on the question of access the critique rests on a structural fact that no outcome evidence removes.
+
+\medskip
+\noindent\textbf{Keywords:} single-sex schooling; public education; selective admission; peer effects; educational stratification; gender norms; causal inference; research design.
+
+\medskip
+\noindent\textbf{Suggested classification:} education (primary); sociology of education and educational stratification; gender studies.
+\end{abstract}
+
+\begin{center}\ja{要旨}\end{center}
+\noindent\ja{公立男子校とは、公の主体が費用を負担して運営し、入学試験のような公の基準で生徒を選び、男子だけを受け入れる学校である。この種の学校の価値をめぐる主張は、多くが実証的な主張である。学力を上げる、人格を育てる、共同体を作る、人のつながりを開く、といった主張である。批判も一部は実証的である。生徒を不平等に選り分ける、性別の規範を再生産する、女子に別のものを与え、それゆえ等しくない、といった批判である。本稿は両方を社会科学の仮説として扱う。まず、この種の学校が価値を生みうる仕組みを示す。仲間の構成、入学試験による選抜、学費の壁がないこと、学校の文化と帰属意識、人のつながりと地位である。次に、平等の観点からの批判を、入学の機会、選り分け、性別の規範の再生産、分けた提供、入学の区分に当てはまらない生徒、という問いの形で述べる。そのうえで、本稿で読んだ研究が何を示すかを、その要旨を引いて報告する。生徒を学校に無作為に割り当てるある都市での研究は、別学の男子の学力に利得を報告し、大規模なメタ分析は統制のある研究では差がごく小さいと報告し、労働市場の研究は性別によって異なる効果を報告している。ここで読んだ効果の研究には、選抜制の公立男子校という制度の型そのものを扱うものはなく、日本を扱うものもない。そこで本稿は、対立する仮説のどちらが正しいかを決めるために、どの比較、どのデータ、どの結果が要るかという研究の設計で締めくくる。結論は、公立男子校の価値は多くの点で開かれた実証の問いであり、入学の機会の点では、批判はどの結果の証拠でも消えない構造上の事実に立っている、というものである。}
+
+\section{Introduction}\label{sec:intro}
+
+Some public authorities maintain schools that admit boys only. Such a school may carry a long institutional history, a strong collective identity, and a reputation tied to the entrance examination by which its pupils are chosen. Debates about whether such schools should continue, or should admit girls, can be conducted as if the facts were settled. A defender may say that the schools work: that their pupils achieve more, form stronger communities and leave with something that coeducational schools do not give. A critic may say that the schools exclude: that a public body should not offer an institution of standing to one sex only, and that single-sex schooling reproduces the gender norms that public education should help pupils to examine.
+
+This paper takes both sides seriously by treating them as hypotheses. Most claims about the value of public boys' schools are claims about effects. They say that some feature of the school causes some outcome for its pupils. Many objections are also claims about effects, though not all of them. The paper asks three questions. First, through what mechanisms could a public boys' school produce value for its pupils, and what would each mechanism predict? Second, what questions does the equality critique pose, stated so that evidence could bear on them? Third, what evidence would be needed to decide between the competing hypotheses, and how much of it is available in the studies read for this paper?
+
+The answer to the last question shapes the whole paper. The studies read here, at the level of their abstracts, report effects of single-sex schooling on achievement, attitudes and labour-market outcomes in several settings. None of them concerns the specific institutional type of the selective public boys' school, and none concerns Japan. The paper therefore does not conclude that public boys' schools are or are not valuable. It concludes with a research design: the comparisons, data and outcomes that would let the question be decided.
+
+Two commitments govern the paper. The first is symmetry. The mechanisms of value and the questions of the critique are each stated in the form most favourable to them, and the paper reports evidence on both sides as its sources report it. The second is restraint about facts. The paper makes no empirical claim of its own. Every empirical finding it reports is quoted from the abstract of the study that reports it, and every number it reports appears inside such a quotation. It makes no claim about the number, distribution, history or outcomes of public single-sex schools in any country, and it does not describe or evaluate any real school.
+
+Section~\ref{sec:terms} fixes terms. Section~\ref{sec:mechanisms} sets out the mechanisms of value. Section~\ref{sec:critique} states the questions of the equality critique. Section~\ref{sec:evidence} reports what the studies read here show. Section~\ref{sec:persistence} sets out hypotheses about why public boys' schools persist. Section~\ref{sec:design} proposes a research design. Section~\ref{sec:conclusion} states the conclusion. Section~\ref{sec:limits} sets out the limitations of the paper. Section~\ref{sec:disclosure} discloses the author's position, which is not evidence for anything argued here. Section~\ref{sec:lit} records how each cited item was read.
+
+\section{Terms and scope}\label{sec:terms}
+
+A \emph{public boys' school}, in this paper, is a school with three features. First, it is funded and governed by a public authority, so that whoever attends it does so as a member of a public, not as a customer. Second, it admits pupils by public criteria, of which the paradigm is an entrance examination open to every eligible applicant. Third, it admits boys only. The definition is stipulative. It picks out an institutional type, not a list of institutions, and nothing in the paper depends on how many schools in any place satisfy it.
+
+These features matter separately, and none of the studies of effects read for this paper isolates them together. A private boys' school shares the third feature but not the first. A public coeducational school that selects by examination shares the first and the second but not the third. A single-sex class inside a coeducational school is a different arrangement again. The studies of effects read here compare single-sex with coeducational schooling, and none takes the selective public single-sex school as its object. The abstracts of works cited below describe single-sex schooling in the state sector in England and Japan \citep{aspinall2024history}, in public and private high schools in a city in which pupils are assigned to schools at random \citep{park2012}, and in public school classrooms in the United States \citep{williams2016}. Whether findings about single-sex schooling in general carry over to the selective public boys' school is itself one of the questions this paper raises.
+
+``Public'' is used here to mean that access is not conditional on a family's ability to pay the cost of the school. Whether, and how much, any public school charges is a matter of jurisdiction and period. The paper makes no claim about current fee policy anywhere.
+
+\emph{Value} is used in a deliberately broad sense: any outcome for pupils, or for others, that a defender of the school would count in its favour. The paper distinguishes value \emph{to participants}, meaning outcomes for those who attend, from the value \emph{of the arrangement}, meaning the effect of the institution's existence on everyone affected by it, including those it excludes. These can come apart. A school can benefit those it admits while the arrangement that admits them makes others worse off, or leaves them no better off than an arrangement that admitted them too.
+
+The distinction between value and justification also matters. Social science can estimate effects. It cannot by itself decide whether an effect justifies an arrangement, since that depends on how outcomes for different people are to be weighed. The paper keeps to what evidence can show, and says where a question is not of that kind.
+
+\section{Mechanisms of value}\label{sec:mechanisms}
+
+This section sets out the mechanisms through which a public boys' school could produce value for its pupils. Each is stated as a hypothesis, with the competing hypothesis that would explain the same observations without it. The section reports evidence only where it bears directly on the statement of a mechanism. The evidence on effects comes in Section~\ref{sec:evidence}.
+
+\mech{Peer composition}\label{mech:peers}
+The first mechanism is the composition of the peer group. A school determines whom a pupil spends the day with, whose regard he seeks and which comparisons are salient. The hypothesis is that removing girls from the peer group changes classroom interaction, the distribution of teachers' attention, and the social comparisons that pupils make, and that these changes affect learning. The hypothesis has several versions. One says that boys are distracted by the presence of girls. Another says that the absence of girls removes a pressure to perform a particular masculinity in front of them. Yet another says that boys in a single-sex setting are freer to take up subjects and activities that are coded as feminine in mixed settings.
+
+The competing hypotheses are as important. Gendered display may not disappear in a single-sex peer group. It may change its form, as competition for standing among boys replaces display toward girls. The research on masculinity summarised in \citet{connell1996} describes pupil cultures that \srcq{connell1996}{construct gender hierarchies}, and nothing in that description requires girls to be present. A peer-composition effect could also be positive for some boys and negative for others, so that an average effect conceals the distribution.
+
+The mechanism also predicts a loss. A single-sex peer group removes the daily practice of working with girls as intellectual peers. If that practice affects attitudes, later cooperation in mixed settings, or beliefs about the abilities of the other sex, then any gain in achievement comes with a change in these outcomes that a full accounting must measure.
+
+\mech{Selection by examination}\label{mech:selection}
+The second mechanism is selection. A school that admits by examination admits pupils who have already shown high attainment, and the composition of its intake is itself a resource: able peers, a shared level of preparation, and teaching calibrated to that level. The hypothesis is that selective schools add value beyond what their pupils would have achieved elsewhere.
+
+The competing hypothesis is that selection explains the observed difference entirely. A school that admits only high-attaining pupils will produce high-attaining graduates whether or not it adds anything. This is a central problem of identification, and the abstracts of \citet{park2012} and \citet{pahlke2014} both turn on it. It is sharper for selective public boys' schools than for single-sex schools in general. Pupils sort into such a school both by attainment and by the choice of applying. Any comparison of its graduates with those of other schools confounds the school's effect with the effect of who chose to apply and who passed. \citet{park2012} open their abstract with this problem: \srcq{park2012}{there is no consensus on the effects of single-sex schools because of student selection of school types}.
+
+Selection also has a distributional side. An examination measures attainment at one point in time, and attainment depends on preparation, which depends on resources. Whether selection by examination reproduces the advantages of families who can afford preparation is a separate empirical question, and one that applies to selective public schools of every kind, single-sex or not.
+
+\mech{Absence of a fee barrier}\label{mech:fees}
+The third mechanism is the public character of the school. Where admission does not depend on ability to pay, a selective public school can bring together pupils from a wider range of households than a fee-charging school of similar standing. The hypothesis is that this widens access to whatever goods the school provides, compared with a system in which schools of similar standing charge fees.
+
+The competing hypothesis is that the absence of fees changes little, because the barrier moves from fees to preparation. If admission depends on an examination for which preparation is costly, the socio-economic composition of a fee-free selective school may resemble that of a fee-charging one. Whether it does is an empirical question about who applies and who is admitted. The paper makes no claim about the answer in any setting.
+
+\mech{School culture and identity}\label{mech:culture}
+The fourth mechanism is the school's culture: its traditions, rituals, expectations and the identity it offers its pupils. A school with a long history may offer a pupil a place in a story larger than himself, and standards and examples that a newer institution cannot. The hypothesis is that a strong institutional identity raises motivation, attachment and effort, and that a single-sex school's identity is part of that strength.
+
+The competing hypotheses concern what the culture carries. A culture formed over a long period as a boys' school may carry the assumptions of the period in which it was formed. \citet{aspinall2024history} concludes, in the abstract of his historical chapter on boys' schools in England and Japan, that \srcq{aspinall2024history}{the historical legacies of gender norms and class identities turned out to be very enduring}. \citet{connell1996} states that \srcq{connell1996}{Masculinizing practices are concentrated at certain sites: curriculum divisions, discipline systems, and sports}. A strong culture can therefore be a source both of the motivation that defenders value and of the gender norms that critics object to. The predictions are not exclusive, and a study could find both.
+
+\mech{Networks and status}\label{mech:networks}
+The fifth mechanism is the network and the status that the school confers. Graduates of a selective school with a long history may share a recognised name and a network of earlier graduates, and these may open opportunities later in life. The hypothesis is that attending the school raises later outcomes through networks and status, not only through what is learned.
+
+The competing hypothesis is that network and status effects are positional. They advantage graduates relative to others, and so they are partly transfers rather than gains. A network effect that benefits graduates of a boys' school is, by construction, a benefit available only to boys. On this mechanism the defender's case for value and the critic's case for exclusion are the same finding read in opposite ways. \citet{leenakazawa2021} list \srcq{leenakazawa2021}{postgraduation network effects} among the potential mechanisms they explore, in a study of the labour-market effects of single-sex high schools.
+
+\paragraph{What the mechanisms have in common.} Of these mechanisms, only peer composition requires that the school be single-sex in order to operate. Selection, the absence of a fee barrier, culture and networks operate in selective public coeducational schools as well. The distinctive claim for public boys' schools therefore rests mainly on peer composition, together with whatever part of culture and networks depends on the school being for boys. This narrows the empirical question considerably. The question is not whether selective public schools add value, but whether single-sex composition adds value to a selective public school, holding its other features fixed.
+
+Table~\ref{tab:mechanisms} summarises the mechanisms, the prediction each makes for pupils of a public boys' school, and the competing explanation that a study would have to rule out.
+
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{>{\raggedright\arraybackslash}p{2.8cm}>{\raggedright\arraybackslash}p{5.4cm}>{\raggedright\arraybackslash}p{5.6cm}}
+\toprule
+Mechanism & Prediction & Competing explanation\\
+\midrule
+Peer composition & composition changes interaction, comparison and subject choice, and so outcomes & gendered display changes form rather than disappearing; average effects conceal losses for some pupils\\
+Selection by examination & the school adds value beyond its intake & the intake explains the difference entirely\\
+Absence of a fee barrier & a wider range of households reaches the school's goods & the barrier moves from fees to preparation\\
+School culture and identity & identity raises motivation and effort & the culture also carries gender norms of the period in which it formed\\
+Networks and status & later outcomes rise through networks and a recognised name & the gains are positional, partly transfers from those outside\\
+\bottomrule
+\end{tabular}
+\caption{Mechanisms of value, their predictions, and competing explanations.}\label{tab:mechanisms}
+\end{table}
+
+\section{The equality critique as a set of questions}\label{sec:critique}
+
+The equality critique of public boys' schools is usually stated normatively. Here it is broken into questions, and for each the paper asks how far evidence could bear on it. Most parts of the critique are empirical. The part about access is not mainly empirical, and saying so is part of stating the critique fairly.
+
+\eqq{Access}\label{eq:access}
+A public boys' school offers a set of goods: a place in a particular institution, its community, its traditions, its name and whatever advantages these confer. It offers them on terms that exclude every girl, whatever her attainment. This is a structural fact about the admission rule, not a hypothesis about effects. It holds whatever the school's effects on its pupils turn out to be.
+
+Evidence can still bear on this question in one way. It can show what the exclusion costs girls. If girls of comparable attainment have access to institutions of comparable standing, the cost may be small. If the boys' school is an institution of standing that no school open to girls matches, the cost may be large. Estimating that cost requires data on the options open to girls in the same area and on the outcomes they lead to. It does not require, and cannot be replaced by, estimates of the school's effect on boys.
+
+\eqq{Sorting}\label{eq:sorting}
+A selective public boys' school sorts pupils by attainment and by sex at once. The question is how this double sorting affects the distribution of pupils across schools and of outcomes across pupils. A system with selective boys' schools might, for example, concentrate high-attaining boys in some schools and leave high-attaining girls more dispersed, or the reverse, depending on what other schools exist. These are questions about the whole system, not about any one school, and they require system-level data on applications, admissions and outcomes by sex.
+
+\eqq{Reproduction of gender norms}\label{eq:norms}
+The critique holds that sorting by sex makes sex the organising category of pupils' daily life, and that this strengthens stereotyped beliefs about the sexes. The hypothesis has a theoretical basis. \citet{bigler2007} describe developmental intergroup theory as a model that \srcq{bigler2007}{addresses the causal ingredients of stereotyping and prejudice}, and state that \srcq{bigler2007}{biases may be largely under environmental control and thus might be shaped via educational, social, and legal policies}. A group of authors, \citet{halpern2011}, summarise their position in one sentence: \srcq{halpern2011}{Single-sex schooling lacks scientific support and may exaggerate sexism and gender stereotyping}.
+
+This is an empirical question, and the evidence read here does not all point one way. \citet{sullivan2010} report, for a cohort born in a single year in one country, that \srcq{sullivan2010}{single-sex schooling is linked to the attainment of qualifications in gender-atypical subject areas for both sexes, not just during the school years, but also later in life}. If that finding held for the institutional type considered here, it would cut against one form of the norm-reproduction hypothesis, since choosing gender-atypical subjects is a departure from gender norms. It would not settle the question, because subject choice is only one outcome. Attitudes toward the other sex, beliefs about ability and behaviour in mixed settings are others, and the studies read here do not report them for boys' schools.
+
+\eqq{Separate provision}\label{eq:separate}
+The critique holds that separate provision is not equal provision, even when resources are equal, because separation carries meaning. The phrase ``separate is not equal'' is borrowed from other debates about segregation in education, and its application to single-sex schooling is contested. Legal scholarship has engaged the question. \citet{heise2004}, reviewing \citet{salomone2017}, reports in his abstract that Salomone \srcq{heise2004}{advances an argument that supports publicly-funded single-sex schooling on constitutional, statutory, and policy grounds}, and that she \srcq{heise2004}{notes that in certain circumstances single-sex schooling options can enhance rather than degrade equal educational opportunity, especially for (but not necessarily limited to) low-income and minority girls}. The abstract ends by considering \srcq{heise2004}{whether the legal and political fate of all-girls' schools might be inexorably tied to the legal and political fate of all-boys' schools}.
+
+That last question matters for this paper. The equality-based case for single-sex schooling that Heise reports from Salomone is a remedial case about girls who are otherwise disadvantaged. It does not transfer to boys' schools by symmetry. Whether separation carries a different meaning for boys' schools than for girls' schools is partly an empirical question, about how pupils, families and the public perceive each, and partly a normative one. The empirical part could be studied with survey and experimental methods. No study read here does so.
+
+\eqq{Pupils whom the category does not fit}\label{eq:fit}
+A school that admits by sex presupposes a classification of applicants and, in practice, a shared way of being a boy. Pupils whose gender identity or expression does not match the category by which the school admits them, or who do not fit the forms of masculinity the school's culture favours, may bear burdens that the arrangement creates. \citet{aspinall2024three}, in the abstract of a chapter on masculinity in boys' schools in England and Japan, writes that \srcq{aspinall2024three}{The experiences of boys who do not fit orthodox images of heterosexual masculinity will be discussed}, and that \srcq{aspinall2024three}{in Japan there has mostly been silence on these topics, meaning that there is very little support for school students or teachers who are members of these minorities}. The paper reports this as Aspinall's finding and makes no claim of its own about any country. Studying the question requires care, because the pupils concerned are few in any one school and easily identified. Section~\ref{sec:design} returns to this.
+
+\subsection{What evidence cannot settle}
+
+Stating the critique as questions shows where evidence stops. Evidence can estimate the effect of a boys' school on its pupils, the cost of exclusion to girls, the sorting the arrangement produces, and how separation is perceived. It cannot say how a gain for those admitted should be weighed against a cost to those excluded, or whether a public authority may offer an institution to one sex at all if the cost to the other is small. Those are questions of political morality. The paper does not answer them. It notes only that they cannot be answered by citing the effect of the school on boys, however large, since that estimate leaves the other side of the comparison untouched.
+
+There is also a question of the burden of proof. A defender might argue that, since the evidence on effects is mixed, nothing should change. A critic might argue that, since the evidence does not show a benefit, the exclusion has no justification. Each argument assigns the burden to the other side without saying why. A social-scientific treatment can make the assignment explicit. Where the question is whether a school adds value, the burden falls on whoever claims an effect. Where the question is whether a public authority may exclude by sex, the burden is set by the normative standard that applies to public institutions, and evidence about effects is relevant only to how heavy it is.
+
+\section{What the evidence read here shows}\label{sec:evidence}
+
+This section reports what the studies read for this paper show about the effects of single-sex schooling, quoting their abstracts. Only abstracts were read. An abstract reports what its authors chose to summarise, and the paper cannot assess the designs, samples or robustness of the studies beyond what their abstracts say.
+
+\subsection{Achievement}
+
+The broadest study read here is a meta-analysis by \citet{pahlke2014}. Its abstract reports that the authors \srcq{pahlke2014}{meta-analyzed data from 184 studies, representing the testing of 1.6 million students in Grades K-12 from 21 nations}. It distinguishes uncontrolled studies from those with \srcq{pahlke2014}{random assignment or controls for selection effects}, and reports that \srcq{pahlke2014}{uncontrolled studies showed some modest advantages for single-sex schooling, for both girls and boys}, while \srcq{pahlke2014}{Controlled studies, however, showed only trivial differences between students in SS versus CE, for mathematics performance (g = 0.10 for girls, 0.06 for boys) and science performance (g = 0.06 for girls, 0.04 for boys)}. Its conclusion is that \srcq{pahlke2014}{Results from the highest quality studies, then, do not support the view that SS schooling provides benefits compared with CE schooling}.
+
+Studies from one city, in which pupils are assigned to high schools at random within districts, report differently. \citet{park2012} report that \srcq{park2012}{attending all-boys schools or all-girls schools, rather than coeducational schools, is significantly associated with higher average scores on Korean and English test scores}, and that \srcq{park2012}{single-sex schools produce a higher percentage of graduates who attended four-year colleges}. \citet{dustmann2017}, using the same kind of assignment together with the conversion of some single-sex schools to coeducation, report \srcq{dustmann2017}{robust evidence that pupils in single-sex schools outperform their counterparts in coed schools}, adding that this \srcq{dustmann2017}{could be due to single-sex peers in school and classroom, or unobservable school-level covariates}. Within schools that converted, they report that \srcq{dustmann2017}{the conversion of the pupil gender type from single-sex to coed leads to worse academic outcomes for both boys and girls}. For boys specifically, they report that \srcq{dustmann2017}{the negative effect is largely driven by exposure to mixed-gender peers at school-level}. That bears directly on Mechanism~\ref{mech:peers}, in that setting.
+
+Other studies read here concern girls, primary schools or a cohort from an earlier period, and are reported for completeness. \citet{eisenkopf2011} report, for random assignment to single-sex and coeducational classes, that \srcq{eisenkopf2011}{single-sex schooling improves the performance of female students in mathematics}. \citet{doris2012}, for primary school children in a system in which single-sex schools \srcq{doris2012}{are part of the general educational system, rather than serving a particular socio-economic group}, report on a mathematics gap in favour of boys that \srcq{doris2012}{our results provide no evidence that single-sex schooling reduces the gap}. \citet{sullivan2010} report that \srcq{sullivan2010}{single-sex schooling is positive for girls at age 16 but neutral for boys, while at later ages, single-sex schooling is neutral for both sexes}.
+
+\subsection{Attitudes and behaviour}
+
+\citet{booth2011} randomly assigned first-year college students to all-female, all-male and coeducational classes, and report that \srcq{booth2011}{after eight weeks in a single-sex environment, women were significantly more likely to choose the lottery than their counterparts in coeducational groups}. Their interpretation is that \srcq{booth2011}{observed gender differences in behaviour under uncertainty found in previous studies might partly reflect social learning rather than inherent gender traits}. The study concerns single-sex classes for young adults, not schools, and its reported finding concerns women. It is relevant here only as evidence that sex composition can change behaviour that is usually treated as a gender trait, which bears on the norm-reproduction question without settling its direction for boys.
+
+\subsection{Labour-market outcomes}
+
+Studies using random assignment to high schools in the same country report effects on later earnings that differ by sex. \citet{lee2021} reports that \srcq{lee2021}{the effect of single-sex schooling on earnings is positive for women but not for men}, and that \srcq{lee2021}{the effect of single-sex schooling on labor market participation is weakly positive for men}. \citet{leenakazawa2021} report that \srcq{leenakazawa2021}{graduating from single-sex schools significantly decreases females' future earnings after graduation}, and that \srcq{leenakazawa2021}{single-sex education positively affects males' future earnings, although the estimates are noisy}. On later earnings, then, the studies differ in the direction they report for women, and neither reports a clear positive effect for men.
+
+\subsection{Heterogeneity}
+
+The abstracts read here report averages for boys, for girls, or for both. They say little about which boys gain or lose. The meta-analysis notes a gap of this kind for one group: \srcq{pahlke2014}{Claims that SS schooling is particularly effective for U.S. ethnic minority boys could not be tested due to the lack of controlled studies on this question}. The same gap applies to the questions of this paper. Whether single-sex composition helps high-attaining boys more or less than others, whether it helps boys from some backgrounds and not others, and whether it harms boys who do not fit the school's dominant masculinity are not questions that the abstracts read here answer.
+
+\subsection{What this evidence does and does not show}
+
+Read together, these abstracts show that the effect of single-sex schooling is contested, that the quality of the research design matters, and that results differ across settings, outcomes and sexes. In the setting with random assignment, the abstracts read here report gains in achievement for pupils of single-sex schools, including boys. In the analysis of conversions, the loss for boys is attributed to school-level exposure to mixed-gender peers. The meta-analysis reports trivial differences in controlled studies across many settings. The labour-market studies report effects that differ by sex and, for men, are weak or noisy.
+
+Three gaps matter for the question of this paper. First, none of the studies of effects read here concerns the institutional type defined in Section~\ref{sec:terms}. In the setting with random assignment, pupils are assigned, not selected by examination, so those studies identify the effect of single-sex composition among pupils who were not selected. Whether the effect is the same in a school whose pupils were selected by examination is unknown. Second, none of the studies of effects read here concerns Japan. Searches of a bibliographic index found records of Japanese-language studies of public single-sex high schools and of debates about making them coeducational, but none could be read, none could be checked against the registry used for the other items, and none is cited. Third, none of the studies read here measures the outcomes on which the equality critique mainly turns: the options and outcomes of excluded girls, system-level sorting, and attitudes toward the other sex.
+
+The evidence read here therefore does not decide between the hypotheses of Section~\ref{sec:mechanisms} and the questions of Section~\ref{sec:critique} for public boys' schools. It shows what kind of evidence exists for single-sex schooling in general, and where it falls short for the type considered here.
+
+\section{Why public boys' schools persist: hypotheses}\label{sec:persistence}
+
+A social-scientific treatment also asks a question that the debate about value tends to skip: why do public boys' schools persist where they do? \citet{aspinall2024history} writes, in the abstract of his historical chapter, that \srcq{aspinall2024history}{The refusal of single-sex schools to go away -- even in the state sector -- is one manifestation of this}, referring to the endurance of the historical legacies of gender norms and class identities. Persistence is itself an outcome that needs explaining, and the explanation matters for how the value debate should be read. The following explanations are hypotheses. No study read here tests them, and the paper makes no claim about which, if any, holds in any place.
+
+\emph{Institutional inertia.} Changing the admission rule of a public school requires a decision, and decisions have costs. An arrangement may persist because no one has borne the cost of changing it, not because anyone has judged it valuable. On this hypothesis, persistence is weak evidence of value.
+
+\emph{A constituency of graduates.} A school with a long history has many graduates, some of whom may value the school as they knew it and may be in a position to influence decisions about it. On this hypothesis, persistence reflects the distribution of influence among those who care about the school, and the constituency for change may be less organised, since it includes girls who were never admitted.
+
+\emph{Family demand.} Some families may prefer single-sex schooling for their sons, and public authorities may respond to that preference. On this hypothesis, persistence reflects demand, and the question becomes whether the demand is informed by evidence about effects, by beliefs about effects, or by the status of particular schools.
+
+\emph{Status competition between schools.} In a system with several selective schools, a school's standing may depend partly on its distinctiveness. On this hypothesis, single-sex composition persists as a marker of distinction, and its value to those inside is partly positional.
+
+These hypotheses predict different things. Inertia predicts that change, once proposed, meets little organised resistance. A graduate constituency predicts resistance concentrated among graduates. Family demand predicts that applications respond to the availability of single-sex options. Status competition predicts that a school's single-sex composition is defended in terms of its standing rather than its effects. Each prediction could be studied with documentary evidence on decisions, surveys of the groups concerned, and data on applications. None of them bears on whether the schools add value. They bear on why the value debate is conducted as it is, and on whose interests are represented in it.
+
+\section{A research design}\label{sec:design}
+
+This section sets out what evidence would be needed to decide between the competing hypotheses for selective public boys' schools. It describes designs, not findings. It makes no claim that any such study exists or does not exist, beyond what was read for this paper.
+
+\subsection{The comparison that matters}
+
+The question for selective public boys' schools is whether single-sex composition adds value to a selective public school, holding its other features fixed. The comparison that answers it is between pupils of comparable attainment admitted to selective public schools that differ in sex composition. Comparing graduates of boys' schools with graduates of all other schools answers a different question, and confounds composition with selection.
+
+\subsection{Designs that address selection}
+
+\emph{Admission cut-offs.} Where admission depends on an examination score, pupils just above and just below the cut-off are similar in attainment but differ in whether they were admitted. A regression-discontinuity design compares them. Where a boys' school and a selective coeducational school both admit by score, the design can estimate the effect of admission to each, and the difference between those effects estimates the contribution of composition at the margin of admission. The design identifies effects only near the cut-off. That is a limitation, and also a strength, since it is there that admission policy has its effect.
+
+\emph{Conversions.} Where a public boys' school becomes coeducational, cohorts before and after the change can be compared, against schools that did not change over the same period. \citet{dustmann2017} report using conversions, together with random assignment, in their setting. A design of this kind identifies the effect of the change in composition within a school, holding the school's fixed characteristics constant. It must allow for changes in who applies once the school admits girls.
+
+\emph{Random assignment.} Where pupils are assigned to schools at random, as in the setting of \citet{park2012}, \citet{dustmann2017}, \citet{lee2021} and \citet{leenakazawa2021}, composition effects can be estimated without selection bias. Random assignment cannot be combined with admission by examination, so it does not identify effects among selected pupils, and the effects it identifies apply to the assigned population.
+
+\emph{Variation in local availability.} Where the availability of single-sex schools varies across areas for reasons unrelated to pupils' characteristics, that variation can serve as an instrument for attendance. The design depends on the assumption that availability affects outcomes only through attendance, which must be argued for in each setting.
+
+\subsection{Outcomes to measure}
+
+A study that is to inform the debate must measure the outcomes that each side cares about, not only examination results.
+
+For the mechanisms of value: achievement and attainment; subject choice, including gender-atypical choices; motivation, attachment and wellbeing; and later outcomes such as higher education, earnings and occupation, with attention to the role of networks.
+
+For the equality critique: the options open to girls of comparable attainment in the same area, and the outcomes those options lead to; system-level measures of sorting by attainment, sex and socio-economic background; attitudes toward the other sex, beliefs about the abilities of each sex, and behaviour in mixed settings later in life; and the experiences of pupils whom the admission category does not fit.
+
+\subsection{Distribution, not only averages}
+
+Each mechanism in Section~\ref{sec:mechanisms} could help some pupils and harm others. An average effect can conceal this. Studies should report effects across the distribution of prior attainment and socio-economic background, and should report effects for the excluded group as well as for the included one. For the access question in particular, the relevant estimate is not the effect of the boys' school on boys, but the effect of the arrangement on girls.
+
+\subsection{Ethics and confidentiality}
+
+Some of these outcomes concern small and easily identified groups, such as pupils whose gender identity does not match their school's admission category. Studies of them need consent procedures, aggregation rules that prevent identification, and the participation of the groups concerned in the design. A study that identified individual pupils, or that characterised a named school on the basis of a few cases, would risk harm out of proportion to what it could show.
+
+\subsection{Spillovers and the counterfactual}
+
+The effect of attending a boys' school is not the same as the effect of the school existing. When a boys' school converts to coeducation, the pupils it would have admitted go elsewhere, the girls it now admits come from somewhere, and the intakes of nearby schools change. The relevant counterfactual for a policy question is therefore not ``this pupil at a coeducational school'' but ``the whole local system without the boys' school'', and that depends on what replaces it. A study of conversions that compared only the converted school before and after would miss these spillovers. A design that follows the intakes and outcomes of all selective schools in an area, before and after a conversion, compared with areas that did not change, would capture them, at the cost of needing many areas or a long period.
+
+\subsection{Measurement}
+
+Several of the outcomes named above are hard to measure. Achievement and attainment can be taken from records. Subject choice can be taken from records of courses and qualifications. Attitudes toward the other sex and beliefs about the abilities of each sex need survey instruments whose validity has been established for the age group and the language concerned, and repeated measurement, since attitudes at the end of school may not persist. Networks can be measured by asking graduates whom they turn to for advice or opportunities, or by linking records of later occupations, but both methods raise questions of consent. Wellbeing and the experiences of pupils whom the admission category does not fit call for instruments designed with those pupils, not only about them. A study that measured only examination results would answer the defender's narrowest question and none of the critic's.
+
+\subsection{External validity}
+
+Even a well-identified estimate applies to a particular population and setting. Random assignment identifies the effect for assigned pupils in the system studied. A regression-discontinuity design identifies the effect for pupils near the admission cut-off. A conversion design identifies the effect of a change in a particular school at a particular time. None of these estimates transfers automatically to selective public boys' schools in another country, where the curriculum, the examination, the alternatives and the meaning of single-sex schooling may differ. Evidence that is to inform decisions in a given system needs to come from that system, or from systems whose relevant features are shown to be similar. For Japan, in particular, the studies of effects read here supply no such evidence.
+
+\subsection{Pre-specification}
+
+A field in which the evidence is mixed and the stakes are contested is one in which results are easily read to fit prior views. Studies of public boys' schools should therefore state in advance which outcomes they will treat as primary, how they will handle multiple comparisons, and what result would count as support for each hypothesis. The next subsection gives an example of such a statement at the level of the whole design.
+
+\subsection{What findings would mean}
+
+The design makes it possible to say in advance what different findings would mean. If composition adds value at the admission margin for boys, and girls of comparable attainment have access to schools that produce comparable outcomes for them, the value claim is supported and the cost of exclusion is small. If composition adds value for boys but girls have no comparable option, the value claim is supported for boys and the cost of exclusion is large, and the gain and the cost must be weighed. If composition adds nothing once selection is controlled for, the distinctive value claim fails, whatever the school's other merits. In every case the structural fact of Question~\ref{eq:access} remains. Evidence can measure what it costs. Evidence cannot make it go away.
+
+\section{Conclusion}\label{sec:conclusion}
+
+The value of public boys' schools is, on most points, an open empirical question. The mechanisms through which such schools could produce value are plausible, and in one setting with random assignment the abstracts read here report gains for boys in single-sex schools, with the loss for boys after conversion attributed to school-level peer composition. But most of the mechanisms do not depend on the school being for boys, the broadest synthesis read here reports trivial differences in controlled studies, the labour-market evidence for men is weak or noisy, and no study of effects read here concerns the selective public boys' school as an institutional type or concerns Japan.
+
+The equality critique is also partly empirical. Whether single-sex schooling reproduces gender norms, how double sorting affects the distribution of pupils, and how separation is perceived are questions that evidence could answer, and the evidence read here does not answer them for the type considered. On access, however, the critique does not depend on evidence. A public boys' school offers an institution to boys alone. That is a fact about its admission rule, and no estimate of its effect on boys changes it. What evidence can do is measure what the exclusion costs those it excludes.
+
+The paper's conclusion is therefore qualified in both directions. It does not say that public boys' schools should be kept, and it does not say that they should be closed or made coeducational. Those are policy decisions that depend on facts about particular places, alternatives and transitions, and on how outcomes for different people are weighed. The paper says what evidence such decisions would need, and that the evidence read here does not supply it.
+
+\section{Limitations of this paper}\label{sec:limits}
+
+The paper has limitations that bear on how far its reading of the evidence can be trusted.
+
+First, only abstracts were read. An abstract compresses a study into a few sentences, selected by its authors. It may omit qualifications, heterogeneous results and robustness checks that would change how a finding should be read. The paper's summaries of the evidence are therefore summaries of what the authors chose to report in their abstracts, and nothing more.
+
+Second, the search was limited. It used a registry of DOI records and an open bibliographic index, with English-language queries for the most part, on a single day. Studies without a DOI, studies whose records lack abstracts, and studies in languages other than English were less likely to be found. In particular, the Japanese-language literature that the index records could not be read and is not cited. The absence of Japanese evidence in this paper is a fact about what could be read here, not a finding that no such evidence exists.
+
+Third, several of the studies cited are working papers. Their findings may have changed in later versions, and the paper cites the version whose abstract was read.
+
+Fourth, the institutional type defined in Section~\ref{sec:terms} is an abstraction. Real schools combine its features in different degrees, and differ in ways the definition ignores. The mechanisms and questions set out here are meant as a framework for studying real cases, not as a description of any of them.
+
+Fifth, the author has a position on the subject, disclosed in the next section. The paper's commitments to symmetry and to quoting its sources are meant to limit the effect of that position. They cannot remove it.
+
+\section{Disclosure of the author's position}\label{sec:disclosure}
+
+The author was admitted to a public boys' high school, attended it for about half a year, and withdrew. The school is not named in this paper, and nothing in the paper describes or evaluates it, its staff or its pupils. The experience is not used as evidence for any claim made here. It is disclosed because it may bias the analysis, and the direction of the bias is not known. It could incline the author to credit the mechanisms of value that he once looked for in such a school, or to discount an institution that he left. The arguments of Sections~\ref{sec:mechanisms} to~\ref{sec:conclusion} are meant to stand or fall without it.
+
+\section{Literature, and how each item was read}\label{sec:lit}
+
+The literature was searched and read on 23 November 2026. Bibliographic records were checked against the public metadata service of a DOI registration agency. Abstracts were taken from that record where the publisher had deposited one, and otherwise from an open bibliographic index, whose abstracts are reconstructed from an index of word positions. No full text of any cited item was read. Every quotation in this paper is taken from an abstract, and the repository's checks compare each quotation with the stored abstract. The item read only as a record is cited for nothing beyond its title and what another item's abstract says about it. Where a working-paper version and a later journal version of a study exist, the version whose abstract was read is cited.
+
+\begin{center}
+\small
+\begin{tabular}{>{\raggedright\arraybackslash}p{3.6cm}>{\raggedright\arraybackslash}p{4.2cm}>{\raggedright\arraybackslash}p{6.8cm}}
+\toprule
+Item & How it was read & Used for\\
+\midrule
+\citet{booth2011} & abstract (DOI record) & sex composition and risk-taking\\
+\citet{bigler2007} & abstract (DOI record) & developmental intergroup theory\\
+\citet{connell1996} & abstract (DOI record) & masculinities and school gender regimes\\
+\citet{doris2012} & abstract (DOI record) & single-sex schooling and the mathematics gap\\
+\citet{dustmann2017} & abstract (DOI record) & random assignment and conversions\\
+\citet{eisenkopf2011} & abstract (DOI record) & single-sex classes and girls' mathematics\\
+\citet{halpern2011} & abstract (DOI record) & the quoted summary sentence\\
+\citet{heise2004} & abstract (DOI record) & Salomone's position and the question of boys' schools\\
+\citet{lee2021} & abstract (DOI record) & labour-market outcomes\\
+\citet{leenakazawa2021} & abstract (DOI record) & labour-market outcomes and networks\\
+\citet{park2012} & abstract (DOI record) & random assignment and achievement\\
+\citet{sullivan2010} & abstract (DOI record) & attainment and gender-atypical subjects\\
+\citet{aspinall2024history} & abstract (bibliographic index) & the history of boys' schools\\
+\citet{aspinall2024three} & abstract (bibliographic index) & masculinity and minorities in boys' schools\\
+\citet{pahlke2014} & abstract (bibliographic index) & the meta-analysis\\
+\citet{williams2016} & abstract (bibliographic index) & single-sex public schooling in the United States\\
+\citet{salomone2017} & record only & cited through the abstract of \citet{heise2004}\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section*{Disclosure of the use of a language model}
+Claude Code was used for this work: to search the bibliographic records and read the abstracts, to draft the text, to write the repository's checks, and to review the draft adversarially for one-sidedness, overclaiming and unverified statements of fact. The author is responsible for the content. Claude is not an author.
+
+\section*{Licence}
+This paper is distributed under the licence CC BY 4.0 (\url{https://creativecommons.org/licenses/by/4.0/}). Quotations from the abstracts of other works remain the property of their rights holders and are not licensed under CC BY 4.0.
+
+\begin{thebibliography}{99}
+\bibitem[Aspinall(2024a)]{aspinall2024history} Aspinall, R.~W. (2024a). The history of boys' schools and secondary education for the middle classes in England and Japan. \doi{10.4324/9781003343417-3}
+\bibitem[Aspinall(2024b)]{aspinall2024three} Aspinall, R.~W. (2024b). The three schools, masculinity, and the education of boys. \doi{10.4324/9781003343417-6}
+\bibitem[Bigler and Liben(2007)]{bigler2007} Bigler, R.~S., \& Liben, L.~S. (2007). Developmental intergroup theory: Explaining and reducing children's social stereotyping and prejudice. \doi{10.1111/j.1467-8721.2007.00496.x}
+\bibitem[Booth et~al.(2011)]{booth2011} Booth, A.~L., Cardona, L., \& Nolen, P.~J. (2011). Gender differences in risk aversion: Do single-sex environments affect their development? Working paper. \doi{10.2139/ssrn.1965150}
+\bibitem[Connell(1996)]{connell1996} Connell, R.~W. (1996). Teaching the boys: New research on masculinity, and gender strategies for schools. \doi{10.1177/016146819609800203}
+\bibitem[Doris et~al.(2012)]{doris2012} Doris, A., O'Neill, D., \& Sweetman, O. (2012). Gender, single-sex schooling and maths achievement. Working paper. \doi{10.2139/ssrn.2164646}
+\bibitem[Dustmann et~al.(2017)]{dustmann2017} Dustmann, C., Ku, H., \& Kwak, D.~W. (2017). Why are single-sex schools successful? Working paper. \doi{10.2139/ssrn.3004353}
+\bibitem[Eisenkopf et~al.(2011)]{eisenkopf2011} Eisenkopf, G., Hessami, Z., Fischbacher, U., \& Ursprung, H. (2011). Academic performance and single-sex schooling: Evidence from a natural experiment in Switzerland. Working paper. \doi{10.2139/ssrn.1938858}
+\bibitem[Halpern et~al.(2011)]{halpern2011} Halpern, D.~F., Eliot, L., Bigler, R.~S., Fabes, R.~A., Hanish, L.~D., Hyde, J., Liben, L.~S., \& Martin, C.~L. (2011). The pseudoscience of single-sex schooling. \doi{10.1126/science.1205031}
+\bibitem[Heise(2004)]{heise2004} Heise, M. (2004). Is single-sex education inherently unequal? Working paper. \doi{10.2139/ssrn.488183}
+\bibitem[Lee(2021)]{lee2021} Lee, K.~H. (2021). Causal effects of single-sex schools on long-term outcomes: Evidence from random high school assignment in South Korea. Working paper. \doi{10.2139/ssrn.3957630}
+\bibitem[Lee and Nakazawa(2021)]{leenakazawa2021} Lee, Y., \& Nakazawa, N. (2021). Does single-sex schooling help or hurt labor market outcomes? Evidence from a natural experiment in South Korea. Working paper. \doi{10.2139/ssrn.3776875}
+\bibitem[Pahlke et~al.(2014)]{pahlke2014} Pahlke, E., Hyde, J.~S., \& Allison, C.~M. (2014). The effects of single-sex compared with coeducational schooling on students' performance and attitudes: A meta-analysis. \doi{10.1037/a0035740}
+\bibitem[Park et~al.(2012)]{park2012} Park, H., Behrman, J.~R., \& Choi, J. (2012). Causal effects of single-sex schools on college entrance exams and college attendance: Random assignment in Seoul high schools. \doi{10.1007/s13524-012-0157-1}
+\bibitem[Salomone(2017)]{salomone2017} Salomone, R.~C. (2017). Same, different, equal: Rethinking single-sex schooling. \doi{10.12987/9780300129144}
+\bibitem[Sullivan et~al.(2010)]{sullivan2010} Sullivan, A., Joshi, H., \& Leonard, D. (2010). Single-sex schooling and academic attainment at school and through the lifecourse. \doi{10.3102/0002831209350106}
+\bibitem[Williams(2016)]{williams2016} Williams, J.~A. (2016). Rethinking gender equality. \doi{10.1525/california/9780520288959.003.0001}
+\end{thebibliography}
+
+\end{document}
