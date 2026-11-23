@@ -240,7 +240,9 @@ def break_test():
         caught = bool(scan("injected", text + "\n", paper=paper, families=fams, publishers=pubs))
         print(f"  {'caught' if caught else 'MISSED'}: {what}")
         bad += not caught
-    caught = bool(vocabulary(tex.replace("Critics say that the schools exclude", "Tanaka says that the schools exclude", 1), fams))
+    anchor = "A critic may say that the schools exclude"
+    assert anchor in tex, anchor
+    caught = bool(vocabulary(tex.replace(anchor, "Tanaka may say that the schools exclude", 1), fams))
     print(f"  {'caught' if caught else 'MISSED'}: a new name in the paper's prose")
     bad += not caught
     caught = bool(scan("injected", "https://orcid.org/0009-0000-1406-0547 Sophaxis\n", paper=True, families=fams, publishers=pubs))
