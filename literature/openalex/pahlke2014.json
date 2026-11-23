@@ -1,0 +1,580 @@
+{
+ "id": "https://openalex.org/W2107457854",
+ "doi": "https://doi.org/10.1037/a0035740",
+ "title": "The effects of single-sex compared with coeducational schooling on students’ performance and attitudes: A meta-analysis.",
+ "publication_year": 2014,
+ "abstract_inverted_index": {
+  "Proponents": [
+   0
+  ],
+  "of": [
+   1,
+   37,
+   53,
+   84,
+   193,
+   253
+  ],
+  "single-sex": [
+   2,
+   120
+  ],
+  "(SS)": [
+   3
+  ],
+  "education": [
+   4
+  ],
+  "believe": [
+   5
+  ],
+  "that": [
+   6,
+   30,
+   224,
+   234
+  ],
+  "separating": [
+   7
+  ],
+  "boys": [
+   8,
+   244
+  ],
+  "and": [
+   9,
+   18,
+   125,
+   162,
+   173,
+   208
+  ],
+  "girls,": [
+   10,
+   158,
+   169
+  ],
+  "by": [
+   11
+  ],
+  "classrooms": [
+   12
+  ],
+  "or": [
+   13,
+   100,
+   104
+  ],
+  "schools,": [
+   14
+  ],
+  "increases": [
+   15
+  ],
+  "students'": [
+   16
+  ],
+  "achievement": [
+   17
+  ],
+  "academic": [
+   19
+  ],
+  "interest.": [
+   20
+  ],
+  "In": [
+   21
+  ],
+  "this": [
+   22,
+   257
+  ],
+  "article,": [
+   23
+  ],
+  "we": [
+   24,
+   87
+  ],
+  "use": [
+   25
+  ],
+  "meta-analysis": [
+   26
+  ],
+  "to": [
+   27,
+   250
+  ],
+  "analyze": [
+   28
+  ],
+  "studies": [
+   29,
+   89,
+   114,
+   195,
+   255
+  ],
+  "have": [
+   31
+  ],
+  "tested": [
+   32,
+   248
+  ],
+  "the": [
+   33,
+   51,
+   82,
+   214,
+   222,
+   251
+  ],
+  "effects": [
+   34
+  ],
+  "on": [
+   35,
+   110,
+   256
+  ],
+  "students": [
+   36,
+   56,
+   146
+  ],
+  "SS": [
+   38,
+   148,
+   225,
+   235
+  ],
+  "compared": [
+   39,
+   229
+  ],
+  "with": [
+   40,
+   230
+  ],
+  "coeducational": [
+   41
+  ],
+  "(CE)": [
+   42
+  ],
+  "schooling.": [
+   43,
+   232
+  ],
+  "We": [
+   44
+  ],
+  "meta-analyzed": [
+   45
+  ],
+  "data": [
+   46
+  ],
+  "from": [
+   47,
+   60,
+   213
+  ],
+  "184": [
+   48
+  ],
+  "studies,": [
+   49,
+   139,
+   217
+  ],
+  "representing": [
+   50
+  ],
+  "testing": [
+   52
+  ],
+  "1.6": [
+   54
+  ],
+  "million": [
+   55
+  ],
+  "in": [
+   57,
+   147,
+   174
+  ],
+  "Grades": [
+   58
+  ],
+  "K-12": [
+   59
+  ],
+  "21": [
+   61
+  ],
+  "nations,": [
+   62
+  ],
+  "for": [
+   63,
+   94,
+   106,
+   119,
+   122,
+   127,
+   135,
+   151,
+   157,
+   160,
+   168,
+   171,
+   184,
+   200,
+   206,
+   210,
+   240
+  ],
+  "multiple": [
+   64
+  ],
+  "outcomes": [
+   65,
+   128
+  ],
+  "(e.g.,": [
+   66,
+   183,
+   199
+  ],
+  "mathematics": [
+   67,
+   69,
+   131,
+   152,
+   201
+  ],
+  "performance,": [
+   68,
+   72
+  ],
+  "attitudes,": [
+   70
+  ],
+  "science": [
+   71,
+   136,
+   163
+  ],
+  "educational": [
+   73,
+   186
+  ],
+  "aspirations,": [
+   74,
+   187
+  ],
+  "self-concept,": [
+   75
+  ],
+  "gender": [
+   76
+  ],
+  "stereotyping).": [
+   77
+  ],
+  "To": [
+   78
+  ],
+  "address": [
+   79
+  ],
+  "concerns": [
+   80
+  ],
+  "about": [
+   81
+  ],
+  "quality": [
+   83,
+   216
+  ],
+  "research": [
+   85
+  ],
+  "designs,": [
+   86
+  ],
+  "categorized": [
+   88
+  ],
+  "as": [
+   90,
+   130
+  ],
+  "uncontrolled": [
+   91,
+   113
+  ],
+  "(no": [
+   92
+  ],
+  "controls": [
+   93,
+   105
+  ],
+  "selection": [
+   95,
+   107
+  ],
+  "effects,": [
+   96
+  ],
+  "no": [
+   97
+  ],
+  "random": [
+   98
+  ],
+  "assignment)": [
+   99
+  ],
+  "controlled": [
+   101,
+   254
+  ],
+  "(random": [
+   102
+  ],
+  "assignment": [
+   103
+  ],
+  "effects).": [
+   108
+  ],
+  "Based": [
+   109
+  ],
+  "mixed-effects": [
+   111
+  ],
+  "analyses,": [
+   112
+  ],
+  "showed": [
+   115,
+   141,
+   177
+  ],
+  "some": [
+   116,
+   175
+  ],
+  "modest": [
+   117
+  ],
+  "advantages": [
+   118
+  ],
+  "schooling,": [
+   121
+  ],
+  "both": [
+   123
+  ],
+  "girls": [
+   124,
+   207
+  ],
+  "boys,": [
+   126
+  ],
+  "such": [
+   129
+  ],
+  "performance": [
+   132,
+   153,
+   164,
+   202
+  ],
+  "but": [
+   133
+  ],
+  "not": [
+   134,
+   220,
+   246
+  ],
+  "performance.": [
+   137
+  ],
+  "Controlled": [
+   138
+  ],
+  "however,": [
+   140
+  ],
+  "only": [
+   142
+  ],
+  "trivial": [
+   143
+  ],
+  "differences": [
+   144,
+   179
+  ],
+  "between": [
+   145
+  ],
+  "versus": [
+   149
+  ],
+  "CE,": [
+   150
+  ],
+  "(g": [
+   154,
+   165
+  ],
+  "=": [
+   155,
+   166,
+   189,
+   204
+  ],
+  "0.10": [
+   156
+  ],
+  "0.06": [
+   159,
+   167
+  ],
+  "boys)": [
+   161
+  ],
+  "0.04": [
+   170
+  ],
+  "boys),": [
+   172
+  ],
+  "cases": [
+   176
+  ],
+  "small": [
+   178
+  ],
+  "favoring": [
+   180
+  ],
+  "CE": [
+   181,
+   231
+  ],
+  "schooling": [
+   182,
+   226,
+   236
+  ],
+  "girls'": [
+   185
+  ],
+  "g": [
+   188,
+   203
+  ],
+  "-0.26).": [
+   190
+  ],
+  "Separate": [
+   191
+  ],
+  "analyses": [
+   192
+  ],
+  "U.S.": [
+   194,
+   241
+  ],
+  "yielded": [
+   196
+  ],
+  "similar": [
+   197
+  ],
+  "findings": [
+   198
+  ],
+  "0.14": [
+   205,
+   209
+  ],
+  "boys).": [
+   211
+  ],
+  "Results": [
+   212
+  ],
+  "highest": [
+   215
+  ],
+  "then,": [
+   218
+  ],
+  "do": [
+   219
+  ],
+  "support": [
+   221
+  ],
+  "view": [
+   223
+  ],
+  "provides": [
+   227
+  ],
+  "benefits": [
+   228
+  ],
+  "Claims": [
+   233
+  ],
+  "is": [
+   237
+  ],
+  "particularly": [
+   238
+  ],
+  "effective": [
+   239
+  ],
+  "ethnic": [
+   242
+  ],
+  "minority": [
+   243
+  ],
+  "could": [
+   245
+  ],
+  "be": [
+   247
+  ],
+  "due": [
+   249
+  ],
+  "lack": [
+   252
+  ],
+  "question.": [
+   258
+  ]
+ },
+ "abstract": "Proponents of single-sex (SS) education believe that separating boys and girls, by classrooms or schools, increases students' achievement and academic interest. In this article, we use meta-analysis to analyze studies that have tested the effects on students of SS compared with coeducational (CE) schooling. We meta-analyzed data from 184 studies, representing the testing of 1.6 million students in Grades K-12 from 21 nations, for multiple outcomes (e.g., mathematics performance, mathematics attitudes, science performance, educational aspirations, self-concept, gender stereotyping). To address concerns about the quality of research designs, we categorized studies as uncontrolled (no controls for selection effects, no random assignment) or controlled (random assignment or controls for selection effects). Based on mixed-effects analyses, uncontrolled studies showed some modest advantages for single-sex schooling, for both girls and boys, for outcomes such as mathematics performance but not for science performance. Controlled studies, however, showed only trivial differences between students in SS versus CE, for mathematics performance (g = 0.10 for girls, 0.06 for boys) and science performance (g = 0.06 for girls, 0.04 for boys), and in some cases showed small differences favoring CE schooling (e.g., for girls' educational aspirations, g = -0.26). Separate analyses of U.S. studies yielded similar findings (e.g., for mathematics performance g = 0.14 for girls and 0.14 for boys). Results from the highest quality studies, then, do not support the view that SS schooling provides benefits compared with CE schooling. Claims that SS schooling is particularly effective for U.S. ethnic minority boys could not be tested due to the lack of controlled studies on this question."
+}

@@ -1,0 +1,36 @@
+{
+ "DOI": "10.2139/ssrn.3004353",
+ "type": "posted-content",
+ "title": [
+  "Why are Single-Sex Schools Successful?"
+ ],
+ "subtitle": [],
+ "author": [
+  {
+   "given": "Christian",
+   "family": "Dustmann",
+   "sequence": "first"
+  },
+  {
+   "given": "Hyejin",
+   "family": "Ku",
+   "sequence": "additional"
+  },
+  {
+   "given": "Do Won",
+   "family": "Kwak",
+   "sequence": "additional"
+  }
+ ],
+ "container-title": [],
+ "publisher": "Elsevier BV",
+ "issued": {
+  "date-parts": [
+   [
+    2017
+   ]
+  ]
+ },
+ "abstract": "<jats:p>We exploit two unusual policy features of academic high schools in Seoul, South Korea—random assignment of pupils to high schools within districts and conversion of some existing single-sex schools to the coeducational (coed) type over time—to identify three distinct causal parameters: the between-school effect of attending a coed (versus a single-sex) school; the within-school effect of school-type conversion, conditional on (unobserved) school characteristics; and the effect of class-level exposure to mixed-gender (versus same-sex) peers. We find robust evidence that pupils in single-sex schools outperform their counterparts in coed schools, which could be due to single-sex peers in school and classroom, or unobservable school-level covariates. Focusing on switching schools, we find that the conversion of the pupil gender type from single-sex to coed leads to worse academic outcomes for both boys and girls, conditional on school fixed effects and time-varying observables. While for boys, the negative effect is largely driven by exposure to mixed-gender peers at school-level, it is class-level exposure to mixed-gender peers that explains this disadvantage for girls.</jats:p>",
+ "URL": "https://doi.org/10.2139/ssrn.3004353"
+}

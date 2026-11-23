@@ -1,0 +1,68 @@
+{
+ "DOI": "10.1126/science.1205031",
+ "type": "journal-article",
+ "title": [
+  "The Pseudoscience of Single-Sex Schooling"
+ ],
+ "subtitle": [],
+ "author": [
+  {
+   "given": "Diane F.",
+   "family": "Halpern",
+   "sequence": "first"
+  },
+  {
+   "given": "Lise",
+   "family": "Eliot",
+   "sequence": "additional"
+  },
+  {
+   "given": "Rebecca S.",
+   "family": "Bigler",
+   "sequence": "additional"
+  },
+  {
+   "given": "Richard A.",
+   "family": "Fabes",
+   "sequence": "additional"
+  },
+  {
+   "given": "Laura D.",
+   "family": "Hanish",
+   "sequence": "additional"
+  },
+  {
+   "given": "Janet",
+   "family": "Hyde",
+   "sequence": "additional"
+  },
+  {
+   "given": "Lynn S.",
+   "family": "Liben",
+   "sequence": "additional"
+  },
+  {
+   "given": "Carol Lynn",
+   "family": "Martin",
+   "sequence": "additional"
+  }
+ ],
+ "container-title": [
+  "Science"
+ ],
+ "volume": "333",
+ "issue": "6050",
+ "page": "1706-1707",
+ "publisher": "American Association for the Advancement of Science (AAAS)",
+ "issued": {
+  "date-parts": [
+   [
+    2011,
+    9,
+    23
+   ]
+  ]
+ },
+ "abstract": "<jats:p>Single-sex schooling lacks scientific support and may exaggerate sexism and gender stereotyping.</jats:p>",
+ "URL": "https://doi.org/10.1126/science.1205031"
+}
