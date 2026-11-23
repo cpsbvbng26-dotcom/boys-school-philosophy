@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+title: "The Value of Public Boys' Schools: A Social-Scientific Perspective"
+message: >-
+  このリポジトリは、上の題の稿（日本語の題は「公立男子校の価値：社会科学的観点から」）の LaTeX の原稿、組んだ PDF、検査を置いています。
+  稿は SSRN に出すためのプレプリントで、査読を経ていません。DOI はまだありません。
+  稿は CC BY 4.0、検査と台本は MIT です。
+  言語モデル Claude Code（Anthropic）を使いました。責任は著者が負います。Claude は著者ではありません。
+type: software
+authors:
+  - family-names: Nemoto
+    given-names: Takuya
+    orcid: https://orcid.org/0009-0000-1406-0547
+repository-code: https://github.com/cpsbvbng26-dotcom/boys-school-philosophy
+license:
+  - CC-BY-4.0
+  - MIT
+date-released: 2026-11-23
+keywords:
+  - single-sex schooling
+  - public education
+  - selective admission
+  - peer effects
+  - educational stratification
+  - gender norms
+  - causal inference
+  - research design
+preferred-citation:
+  type: article
+  title: "The Value of Public Boys' Schools: A Social-Scientific Perspective"
+  authors:
+    - family-names: Nemoto
+      given-names: Takuya
+      orcid: https://orcid.org/0009-0000-1406-0547
+  year: 2026
+  notes: "Preprint prepared for SSRN. Not peer-reviewed. No DOI yet."
