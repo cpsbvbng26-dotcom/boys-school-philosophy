@@ -104,7 +104,7 @@ The author is responsible for the content. Claude is not an author.
 Errors are received through the issue form "Error report". From 2026-12-01, such issues are checked by the checked intake, whose tool and workflow (`.github/checked-intake/verify.js`, `.github/workflows/checked-intake.yml`) are word-for-word copies of those in the operator's other repositories.
 How personal information received in issues is handled, and how to ask for its disclosure, correction, suspension of use or deletion, is set out in the section "Information" of the operator's [disclaimer](https://github.com/cpsbvbng26-dotcom/cpsbvbng26-dotcom/blob/main/DISCLAIMER.en.md). How the title and text of an issue are given to a language model is set out in the section "Issues and the language model" of the same page.
 
-`SECURITY.md` is also a word-for-word copy. The "disclaimer" in it is the page above, and its "checked on 2026-11-12" is the date checked in the repository it was copied from. This repository was created on 2026-11-23.
+`SECURITY.md` is also a word-for-word copy. The "disclaimer" in it is the page above, and its "checked on 2026-11-12" is the date checked in the repository it was copied from. This repository was created on 2026-11-23. That GitHub's private vulnerability reporting is not enabled for this repository either was checked with the GitHub API on 2026-11-23.
 
 ## Licence
 
