@@ -29,6 +29,6 @@ SSRN に出すための稿 "The Value of Public Boys' Schools: A Social-Scientif
 python3 verification/check_paper.py         # 著者・開示・題・PDF の頁数と SHA-256 と語数・紙面と README の数（--break）
 python3 verification/check_sources.py       # 文献の記録・読み方・引用（--online で Crossref と照らし直す、--break）
 python3 verification/check_text.py          # 使わない語・存命の人・学校の名・創作の場・紙面の団体名（--break）
-python3 verification/check_copies.py        # 正本の写しとライセンス（--break）
+python3 verification/check_copies.py        # 正本の写し・ライセンス・.zenodo.json（--break）
 node .github/checked-intake/verify.js --check
 ```

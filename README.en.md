@@ -18,6 +18,13 @@ The body has 7,367 words, counted in the text of the PDF from the heading "1 Int
 The subject is not added to the self-study series of the first undergraduate year (the three papers in autonomy-and-self-cultivation). It goes out as a new subject, as a preprint on SSRN.
 SSRN was chosen as a venue that charges neither authors nor readers. Its current terms were not checked, because SSRN cannot be reached from the environment in which the work was done.
 
+## The Zenodo record settings
+
+`.zenodo.json` holds the settings that Zenodo reads when a GitHub release is published. It was added on 2026-11-25.
+Its title, creator, licence and keywords agree with `CITATION.cff`. The paper has no DOI yet, so no related identifier is given.
+This repository has no GitHub release and no tag, as checked with the GitHub API on 2026-11-25. The archiving from GitHub to Zenodo has therefore never run.
+`verification/check_copies.py` compares `.zenodo.json` with `CITATION.cff` and `LICENSE`.
+
 ## What the paper argues
 
 The value of public boys' schools is, on most points, an open empirical question.
@@ -87,12 +94,12 @@ python3 -m pip install -r requirements.txt
 python3 verification/check_paper.py      # author, disclosures, title, the PDF's pages, SHA-256 and words, prose numbers, README numbers
 python3 verification/check_sources.py    # records, read modes, quotations against abstracts (--online: compare with Crossref again)
 python3 verification/check_text.py       # words not to use, living persons, school names, links to creative works, organisation names in the paper
-python3 verification/check_copies.py     # canonical copies and licences
+python3 verification/check_copies.py     # canonical copies, licences and .zenodo.json
 node .github/checked-intake/verify.js --check
 ```
 
 With `--break`, each check builds broken variants one by one and confirms that each fails.
-There are 56 break cases across the four checks; `check_paper.py` recounts them by running every check with `--break`.
+There are 65 break cases across the four checks; `check_paper.py` recounts them by running every check with `--break`.
 
 ## Use of a language model
 

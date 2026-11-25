@@ -25,6 +25,17 @@ SHA-256 は `308ac06cbbbd8450806333b73eb572b5ea9b47083f0c99ef81a694c7caf03ffc` �
 SSRN は投稿にも閲覧にも費用を取らない場として選びました。
 SSRN の今の規程は、作業の環境から SSRN に届かないため、確かめていません。
 
+## Zenodo の記録の設定
+
+`.zenodo.json` は、GitHub の Release を出したときに Zenodo が読む記録の設定です。
+2026-11-25 に置きました。
+題・著者・ライセンス・キーワードは、`CITATION.cff` と揃えています。
+稿の DOI はまだ無いので、関連する識別子は書いていません。
+このリポジトリには、GitHub の Release もタグもありません。
+2026-11-25 に、GitHub の API で確かめました。
+そのため、GitHub から Zenodo への保存は、まだ一度も走っていません。
+`verification/check_copies.py` が、`.zenodo.json` を `CITATION.cff` と `LICENSE` に突き合わせています。
+
 ## 稿の主張
 
 公立男子校の価値は、多くの点で開かれた実証の問いです。
@@ -118,12 +129,12 @@ python3 -m pip install -r requirements.txt
 python3 verification/check_paper.py      # 稿の著者・開示・題・PDF の頁数と SHA-256 と語数・散文の数・README の数
 python3 verification/check_sources.py    # 引いた文献の記録・読み方・引用と要旨の照合（--online で Crossref と照らし直す）
 python3 verification/check_text.py       # 使わない語・存命の人・学校の名・創作の場へのリンク・紙面の団体名
-python3 verification/check_copies.py     # 正本の写しとライセンス
+python3 verification/check_copies.py     # 正本の写し・ライセンス・.zenodo.json
 node .github/checked-intake/verify.js --check
 ```
 
 どの検査も `--break` を付けると、壊した形を一つずつ作って、落ちることを確かめます。
-壊して確かめる型は、四つの検査で合わせて 56 通りです。
+壊して確かめる型は、四つの検査で合わせて 65 通りです。
 この数は `check_paper.py` が、四つの検査を `--break` で走らせて数え直しています。
 
 ## 言語モデルの利用
