@@ -1,0 +1,25 @@
+{
+  "title": "The Value of Public Boys' Schools: A Social-Scientific Perspective: source, PDF and checks (boys-school-philosophy)",
+  "description": "<p>The LaTeX source, the typeset PDF and the checks of the paper \"The Value of Public Boys' Schools: A Social-Scientific Perspective\". The paper is a preprint prepared for SSRN and is not peer-reviewed. It has no DOI yet. The repository also keeps the records of the works the paper cites, how each was read (from the abstract in its Crossref record, from the abstract in OpenAlex, or from the record only), and the checks that compare each quotation with the stored abstract.</p><p>稿「公立男子校の価値：社会科学的観点から」の LaTeX の原稿・組んだ PDF・検査を置いたリポジトリの保存版です。稿は SSRN に出すためのプレプリントで、査読を経ていません。DOI はまだありません。</p>",
+  "upload_type": "software",
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "language": "eng",
+  "creators": [
+    {
+      "name": "Nemoto, Takuya",
+      "orcid": "0009-0000-1406-0547"
+    }
+  ],
+  "keywords": [
+    "single-sex schooling",
+    "public education",
+    "selective admission",
+    "peer effects",
+    "educational stratification",
+    "gender norms",
+    "causal inference",
+    "research design"
+  ],
+  "notes": "Claude Code (Anthropic) was used to search for the records of the literature and read their abstracts, to draft the text, to write the checks, and to reread the text for bias, overstatement and unchecked facts. The author is responsible for the content. Claude is not an author. The paper, its LaTeX source and the prose are CC BY 4.0 (LICENSE); the checks and the scripts are MIT (LICENSE-CODE). The licence field of this record covers the paper, its LaTeX source and the prose only. Texts by others that this repository quotes, or keeps to verify its quotations, are not licensed under CC BY 4.0 or the MIT License and remain their owners'."
+}
